@@ -1,0 +1,461 @@
+/* src/app/dashboard/page.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+/* Encabezados */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #04ec1f;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #a3a3a3;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tarjetas de Acceso Rápido */
+.quickLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #0a0a0a;
+  cursor: pointer;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.cardGreen {
+  border: 1px solid #04ec1f;
+}
+
+.cardDark {
+  border: 1px solid #1f2937;
+}
+
+.cardGreen:hover {
+  box-shadow: 0 4px 12px rgba(4, 236, 31, 0.15);
+}
+
+.cardTitleGreen {
+  color: #56ff64;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cardTitleWhite {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cardDesc {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Estado de Carga */
+.loading {
+  text-align: center;
+  color: #04ec1f;
+  padding: 2rem;
+}
+
+/* Layout del Dashboard (Gráficas y KPIs) */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chartSection {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.chartTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chartContainer {
+  width: 100%;
+}
+
+.kpiColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* KPI Tarjetas */
+.kpiAlertCard {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid #ef4444;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kpiIconWrapper {
+  background-color: rgba(239, 68, 68, 0.2);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.kpiAlertLabel {
+  color: #ef4444;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.kpiAlertValue {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.kpiUnit {
+  font-size: 1rem;
+  color: #a3a3a3;
+}
+
+.alertsCard {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.alertsTitle {
+  color: #eab308;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0;
+}
+
+.alertsEmpty {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+}
+
+.alertsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alertItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.5rem;
+}
+
+.alertName {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.alertBadge {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #eab308;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.divider {
+  border-color: #1f2937;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
+
+/* Tablas Dinámicas (Modo Excel Oscuro Neón) */
+.tablesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.tableContainer {
+  border: 1px solid #04ec1f;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Quitamos la flecha por defecto del <details> porque tú le pusiste [+] y [-] */
+.detailsSummary {
+  list-style: none;
+}
+.detailsSummary::-webkit-details-marker {
+  display: none;
+}
+
+.tableHeader {
+  background-color: #000;
+  color: #04ec1f;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #04ec1f;
+}
+
+.rowLevel1 {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #1f2937;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.rowLevel1:hover { background-color: #111827; }
+
+.rowLevel2 {
+  background-color: #111827;
+  color: #eab308;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  border-bottom: 1px solid #1f2937;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.rowLevel2:hover { background-color: #1f2937; }
+
+.rowItem {
+  background-color: #000;
+  color: #a3a3a3;
+  padding: 0.4rem 1rem 0.4rem 3rem;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.rowSerial {
+  background-color: #0a0a0a;
+  color: #04ec1f;
+  padding: 0.3rem 1rem 0.3rem 4rem;
+  border-bottom: 1px dashed #1f2937;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+.flexGap {
+  display: flex;
+  gap: 5px;
+}
+
+.palletIcon {
+  color: #3b82f6; /* Azul brillante para resaltar los pallets */
+}
+/* --- NUEVO: ESTILOS DE CALENDARIO Y VENTANA EMERGENTE (MODAL) --- */
+
+.filtersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dateFilters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #111827;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1f2937;
+}
+
+.dateLabel {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+}
+
+.dateInput {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #374151;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: #0a0a0a;
+  border: 1px solid #04ec1f;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.modalHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  color: #fff;
+  margin: 0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #a3a3a3;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover { color: #ef4444; }
+
+.modalBody {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.detailTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.detailTable th {
+  text-align: left;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: #a3a3a3;
+  border-bottom: 2px solid #1f2937;
+}
+
+.detailTable td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #1f2937;
+  color: #fff;
+}
+/* Botón Exportar Excel */
+.exportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.excelBtn {
+  background-color: #0a0a0a;
+  color: #04ec1f;
+  border: 1px solid #04ec1f;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.excelBtn:hover {
+  background-color: #04ec1f;
+  color: #000;
+  box-shadow: 0 0 10px rgba(4, 236, 31, 0.5);
+}

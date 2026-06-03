@@ -1,0 +1,174 @@
+/* src/app/dashboard/layout.module.css */
+
+.dashboardContainer {
+  display: flex;
+  height: 100vh; /* Cambiamos min-height por height estricto */
+  overflow: hidden; /* ¡Clave! Evita el scroll global del navegador */
+  background-color: #000000;
+  color: #ffffff;
+}
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+/* 3. Protegemos la Topbar para que no se aplaste cuando haya mucho contenido */
+.topbar {
+  height: 4rem;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  flex-shrink: 0; /* ¡Clave! Evita que el scroll la comprima */
+}
+
+/* 4. Le damos el poder del scroll SOLAMENTE a esta caja */
+.pageContent {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto; /* Aquí nace el scroll interno */
+  overflow-x: hidden; /* Evitamos scrolls horizontales feos */
+}
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 260px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #00b218; /* Borde verde ALZ */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #00b218;
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #04ec1f;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.navMenu {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #a3a3a3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: rgba(4, 236, 31, 0.1);
+  color: #04ec1f;
+}
+
+.navItemActive {
+  background-color: rgba(4, 236, 31, 0.2);
+  color: #56ff64;
+  border-left: 3px solid #04ec1f;
+}
+
+/* --- ÁREA PRINCIPAL --- */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 4rem;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: #000000;
+  background-color: #04ec1f;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logoutButton {
+  background: none;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+.pageContent {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.loadingScreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #04ec1f;
+  background-color: #000000;
+}

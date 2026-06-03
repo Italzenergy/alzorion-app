@@ -1,0 +1,184 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.actionBar {
+  display: flex;
+  gap: 1rem;
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #374151;
+}
+
+.btnPrimary {
+  background-color: #04ec1f;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btnPrimary:hover { background-color: #03c018; }
+
+.btnSecondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #374151;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.btnSecondary:hover { background-color: #1f2937; }
+
+/* Tarjetas (Estilo Odoo) */
+.card {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.formGroup { margin-bottom: 1rem; position: relative; }
+.formGroup label { display: block; color: #a3a3a3; font-size: 0.85rem; margin-bottom: 0.3rem; font-weight: bold; }
+.input {
+  width: 100%; padding: 0.5rem; background: transparent; border: none; border-bottom: 1px solid #374151;
+  color: #fff; outline: none; transition: border-color 0.2s;
+}
+.input:focus { border-bottom-color: #04ec1f; }
+
+/* Tabla Dinámica (Líneas de la orden) */
+.tabs { border-bottom: 1px solid #374151; margin-bottom: 1rem; padding-bottom: 0.5rem; }
+.tabActive { color: #04ec1f; font-weight: bold; border-bottom: 2px solid #04ec1f; padding-bottom: 0.6rem; }
+
+.table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.table th { text-align: left; color: #a3a3a3; font-size: 0.85rem; padding-bottom: 0.5rem; border-bottom: 1px solid #374151; }
+.table td { padding: 0.5rem 0; vertical-align: top; }
+.table input, .table select { width: 100%; background: transparent; border: none; color: #fff; outline: none; border-bottom: 1px solid transparent; }
+.table input:focus, .table select:focus { border-bottom-color: #374151; }
+
+.addLineBtn { color: #04ec1f; background: none; border: none; cursor: pointer; font-weight: bold; padding: 0.5rem 0; }
+.addLineBtn:hover { text-decoration: underline; }
+.removeBtn { color: #ef4444; background: none; border: none; cursor: pointer; }
+
+/* Totales */
+.totalsSection {
+  width: 300px; margin-left: auto; margin-top: 2rem; border-top: 1px solid #374151; padding-top: 1rem;
+}
+.totalRow { display: flex; justify-content: space-between; margin-bottom: 0.5rem; color: #a3a3a3; }
+.totalRow.grandTotal { color: #fff; font-size: 1.2rem; font-weight: bold; border-top: 1px solid #374151; padding-top: 0.5rem; margin-top: 0.5rem; }
+
+/* Autocomplete Dropdown */
+.autocompleteList {
+  position: absolute; top: 100%; left: 0; right: 0; background: #111827; border: 1px solid #374151;
+  border-radius: 0.25rem; z-index: 10; max-height: 200px; overflow-y: auto;
+}
+.autocompleteItem {
+  padding: 0.5rem; cursor: pointer; border-bottom: 1px solid #1f2937; display: flex; flex-direction: column;
+}
+.autocompleteItem:hover { background: #1f2937; }
+.clientName { color: #fff; font-weight: bold; }
+.clientNid { color: #a3a3a3; font-size: 0.8rem; }
+
+/* =========================
+   DROPDOWN PRODUCTOS
+   ========================= */
+
+.productSearchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.productDropdown {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  z-index: 50;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.productOption {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #111827;
+  transition: all 0.15s ease;
+}
+
+/* hover */
+.productOption:hover {
+  background: rgba(4, 236, 31, 0.15);
+  color: #04ec1f;
+}
+
+/* activo (el que estás seleccionando) */
+.activeOption {
+  background: #04ec1f;
+  color: #000;
+  font-weight: 600;
+}
+
+.taxSelectContainer {
+  position: relative;
+}
+
+.taxSelect {
+  background-color: #02061700;
+  border: 1px solid #38e710;
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.taxDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #0b1702;
+  border: 1px solid #374151;
+  border-radius: 0.25rem;
+  z-index: 20;
+}
+
+.taxOption {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.taxOption:hover {
+  background-color: #38e710;
+}

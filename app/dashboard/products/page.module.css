@@ -1,0 +1,141 @@
+/* src/app/dashboard/products/page.module.css */
+
+.container {
+  max-width: 1200px; /* ¡AUMENTAMOS DE 800px a 1200px para ver mejor la tabla! */
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #04ec1f;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #a3a3a3;
+  margin: 0;
+}
+
+/* --- FORMULARIO DESPLEGABLE --- */
+.card {
+  background-color: #0a0a0a;
+  border: 1px solid #00b218;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 178, 24, 0.1);
+  margin-bottom: 2rem;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.inputGroup { display: flex; flex-direction: column; }
+.inputGroupFull { grid-column: span 2; display: flex; flex-direction: column; }
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #000000;
+  border: 1px solid #1f2937;
+  border-radius: 0.5rem;
+  color: #56ff64;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus, .select:focus {
+  border-color: #04ec1f;
+  box-shadow: 0 0 0 2px rgba(4, 236, 31, 0.2);
+}
+
+.select option { background-color: #0a0a0a; color: #ffffff; }
+
+.checkboxContainer {
+  display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;
+  padding: 1rem; background-color: #000000; border: 1px dashed #00b218;
+  border-radius: 0.5rem; cursor: pointer;
+}
+.checkbox { width: 1.25rem; height: 1.25rem; accent-color: #04ec1f; cursor: pointer; }
+.checkboxLabel { color: #a3a3a3; font-size: 0.875rem; user-select: none; }
+.checkboxHighlight { color: #04ec1f; font-weight: bold; }
+
+.buttonContainer { margin-top: 2rem; display: flex; justify-content: flex-end; }
+
+.submitBtn {
+  background-color: #04ec1f; color: #000000; border: none; padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem; cursor: pointer;
+  transition: background-color 0.2s; display: flex; align-items: center; gap: 0.5rem;
+}
+.submitBtn:hover:not(:disabled) { background-color: #00b218; }
+.submitBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* --- TABLA DE PRODUCTOS --- */
+.tableWrapper {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  overflow-x: auto; /* ¡HACE LA TABLA RESPONSIVE! */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.tableHeader { padding: 1.5rem; border-bottom: 1px solid #1f2937; background-color: #000000; }
+.tableTitle { font-size: 1.25rem; font-weight: 600; color: #04ec1f; margin: 0; }
+
+.table { width: 100%; border-collapse: collapse; text-align: left; min-width: 900px; }
+
+.th {
+  padding: 1rem 1.5rem; font-size: 0.75rem; text-transform: uppercase;
+  font-weight: 700; color: #a3a3a3; border-bottom: 1px solid #1f2937; background-color: #000000;
+}
+
+.td { padding: 1rem 1.5rem; font-size: 0.875rem; color: #ffffff; border-bottom: 1px solid #1f2937; }
+
+.badge { padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.badgeSerial { background-color: rgba(4, 236, 31, 0.1); color: #04ec1f; border: 1px solid #00b218; }
+.badgeBulk { background-color: rgba(163, 163, 163, 0.1); color: #a3a3a3; border: 1px solid #374151; }
+
+.deleteBtn {
+  background: none; border: none; color: #ef4444; cursor: pointer;
+  padding: 0.5rem; border-radius: 0.5rem; transition: background-color 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.deleteBtn:hover { background-color: rgba(239, 68, 68, 0.1); }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .formGrid { grid-template-columns: 1fr; }
+  .inputGroupFull { grid-column: span 1; }
+  .header { flex-direction: column; align-items: flex-start; }
+  .submitBtn { width: 100%; justify-content: center; }
+  .buttonContainer { flex-direction: column; gap: 10px; }
+}

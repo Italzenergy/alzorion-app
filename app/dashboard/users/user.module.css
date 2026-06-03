@@ -1,0 +1,192 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #04ec1f;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subtitle {
+  color: #a3a3a3;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.75rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  color: #a3a3a3;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.input:focus, .select:focus {
+  border-color: #04ec1f;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: #04ec1f;
+  color: #000;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: #03c018;
+  box-shadow: 0 0 10px rgba(4, 236, 31, 0.3);
+}
+
+.submitBtn:disabled {
+  background-color: #1f2937;
+  color: #6b7280;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: #04ec1f;
+  border-bottom: 2px solid #1f2937;
+}
+
+.table td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #1f2937;
+  color: #fff;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badgeAdmin { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.badgeLogistica { background-color: rgba(4, 236, 31, 0.2); color: #04ec1f; }
+.badgeConsultor { background-color: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.deleteBtn:hover { transform: scale(1.1); }
+
+/* Agrega esto al final de tu user.module.css */
+.passwordWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.passwordWrapper:focus-within {
+  border-color: #04ec1f;
+}
+
+.passwordWrapper input {
+  border: none;
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.passwordWrapper input:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: #a3a3a3;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.iconBtn:hover {
+  color: #04ec1f;
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-right: 0.5rem;
+}
+
+.editBtn:hover { transform: scale(1.1); }

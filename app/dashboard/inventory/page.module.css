@@ -1,0 +1,423 @@
+/* =========================================
+   ESTILOS COMPARTIDOS (CONTENEDORES)
+   ========================================= */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ampliado para que la tabla quepa perfecta */
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #04ec1f;
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  color: #a3a3a3;
+  margin: 0;
+}
+
+.btnPrimary {
+  background-color: #04ec1f;
+  color: #000000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.btnPrimary:hover {
+  transform: scale(1.02);
+  background-color: #00b218;
+}
+
+/* =========================================
+   MÓDULO 1: FORMULARIO DE INGRESO (/new)
+   ========================================= */
+.card {
+  background-color: #0a0a0a;
+  border: 1px solid #00b218;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 178, 24, 0.1);
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  color: #ffffff;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroupFull {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #000000;
+  border: 1px solid #1f2937;
+  border-radius: 0.5rem;
+  color: #56ff64;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input:focus, .select:focus {
+  border-color: #04ec1f;
+  box-shadow: 0 0 0 2px rgba(4, 236, 31, 0.2);
+}
+
+.productInfoCard {
+  background-color: #111827;
+  border: 1px dashed #00b218;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.infoLabel {
+  color: #a3a3a3;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.infoValue {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Zona de Excel Mejorada */
+.excelZone {
+  border: 2px dashed #374151;
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+  background-color: #0a0a0a;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.excelZone:hover {
+  border-color: #04ec1f;
+  background-color: rgba(4, 236, 31, 0.05);
+}
+
+.excelTextTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.excelTextSub {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+}
+
+.excelInput {
+  display: none;
+}
+
+.serialTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.serialTable th {
+  text-align: left;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: #a3a3a3;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.serialTable td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #1f2937;
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.submitBtn {
+  background-color: #04ec1f;
+  color: #000000;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #00b218;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   MÓDULO 2: TABLA GENERAL (Inventario Base)
+   ========================================= */
+.filterBar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchWrapper {
+  flex: 1;
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 0.75rem 0;
+  width: 100%;
+  outline: none;
+}
+
+.selectFilter {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.tableWrapper {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  background-color: #000000;
+  color: #a3a3a3;
+  font-weight: 600;
+  border-bottom: 2px solid #1f2937;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #1f2937;
+  color: #e5e7eb;
+}
+
+.ownerBadge {
+  background-color: rgba(4, 236, 31, 0.1);
+  color: #04ec1f;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.statusBadge {
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.disponible { background: rgba(4, 236, 31, 0.1); color: #04ec1f; border: 1px solid #04ec1f; }
+.vendido { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444; }
+.reservado { background: rgba(234, 179, 8, 0.1); color: #eab308; border: 1px solid #eab308; }
+
+/* =========================================
+   MÓDULO 4: MODAL DE AJUSTES Y GARANTÍAS
+   ========================================= */
+.actionBtn {
+  background: none;
+  border: none;
+  color: #eab308; /* Amarillo advertencia */
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionBtn:hover {
+  background-color: rgba(234, 179, 8, 0.1);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #0a0a0a;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 1rem;
+}
+
+.modalTitle {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #ffffff;
+}
+
+.modalBody p {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btnCancel {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #374151;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btnCancel:hover {
+  background-color: #1f2937;
+}
+
+.btnWarning {
+  background-color: #eab308;
+  color: #000000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnWarning:hover:not(:disabled) {
+  background-color: #ca8a04;
+}
+
+.btnWarning:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
