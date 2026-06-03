@@ -57,11 +57,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <ChartPie size={20} />
             <span>Analitica Comercial</span>
           </Link>)}
-          {/* CATÁLOGO (NUEVO) 
+         
           <Link href="/dashboard/products" className={`${styles.navItem} ${pathname.includes('/dashboard/products') ? styles.navItemActive : ''}`}>
             <PlusCircle size={20} />
             <span>Catálogo</span>
-          </Link>*/}
+          </Link>
 
           {/* INVENTARIO
           <Link href="/dashboard/inventory" className={`${styles.navItem} ${pathname.includes('/dashboard/inventory') ? styles.navItemActive : ''}`}>
