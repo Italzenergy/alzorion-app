@@ -63,12 +63,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <span>Catálogo</span>
           </Link>
 
-          {/* INVENTARIO
+          {/* INVENTARIO*/}
           <Link href="/dashboard/inventory" className={`${styles.navItem} ${pathname.includes('/dashboard/inventory') ? styles.navItemActive : ''}`}>
             <Package size={20} />
             <span>Inventario</span>
           </Link>
-                        */}
+                        
           {/* ACTAS DE SALIDA */}
           {(user?.role === 'admin'||user?.role=== 'logistica')&&(
           <Link href="/dashboard/actas" className={`${styles.navItem} ${pathname.includes('/dashboard/actas') ? styles.navItemActive : ''}`}>
