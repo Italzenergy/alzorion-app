@@ -132,7 +132,7 @@ export default function QuotationsPage() {
 
       // BYPASS: Usamos fetch nativo crudo. Nada de api.post() aquí.
       // Así garantizamos que el navegador cree el "Boundary" perfectamente.
-      const response = await fetch(`http://localhost:4000/api/quotations/${paymentModal.quoteId}/upload-receipt`, {
+      const response = await fetch(`https://alzorion-app.vercel.app/api/quotations/${paymentModal.quoteId}/upload-receipt`, {
         method: 'POST',
         body: formData,
         credentials: 'include', // Vital: Permite que viajen las cookies para que el Portero te deje pasar
