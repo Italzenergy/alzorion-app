@@ -382,7 +382,7 @@
                         {/* BOTÓN PARA VER COMPROBANTE (Solo si existe receipt_url) */}
                         {q.receipt_url && (
                           <a 
-                            href={`http://localhost:4000${q.receipt_url}`} 
+                            href={`https://srv1646916.hstgr.cloud${q.receipt_url}`} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className={styles.actionBtn}
