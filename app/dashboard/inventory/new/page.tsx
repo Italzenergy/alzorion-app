@@ -193,7 +193,7 @@ const [generalData, setGeneralData] = useState({
               <label className={styles.label}>Dueño de la Mercancía *</label>
               <select value={generalData.owner} onChange={e => setGeneralData({...generalData, owner: e.target.value})} className={styles.select}>
                 <option value="ALZ">ALZ</option>
-                <option value="SUNCON">Suncon</option>
+                <option value="SUNCON">Suncol</option>
                 <option value="AMBOS">Ambos (Compartido)</option>
               </select>
             </div>
