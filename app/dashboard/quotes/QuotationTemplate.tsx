@@ -21,7 +21,7 @@ export const QuotationTemplate = forwardRef<HTMLDivElement, QuotationTemplatePro
   const currentConfig: TemplateConfig = config || {
     primaryColor: '#04ec1f',
     fontFamily: "'Montserrat', sans-serif",
-    logoUrl: '', 
+    logoUrl: 'https://srv1646916.hstgr.cloud/uploads/logo.png', 
     logoPosition: 'left',
     title: 'COTIZACIÓN COMERCIAL',
     roundedBorders: true,
@@ -190,20 +190,27 @@ export const QuotationTemplate = forwardRef<HTMLDivElement, QuotationTemplatePro
             <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#1f2937', fontWeight: 'bold' }}>
               Términos y Condiciones
             </h4>
-            <div style={{ margin: 0, fontSize: '10px', color: '#6b7280', lineHeight: '1.6' }}>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Vigencia de la oferta:</strong> {quote.validity_days ?? 5} días calendario. La venta o reserva de equipos se inicia con Orden de Compra, comprobante de pago y/o anticipo del {quote.advance_percentage ?? 30}% del valor total ofertado.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Instalación:</strong> El cliente asume la responsabilidad en la instalación y montaje de los equipos.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Pagos:</strong> Las transferencias o consignaciones se deben efectuar a nombre de {quote.company_name ?? 'ALZ ENERGY SAS'} NIT: {quote.nit ?? '901.105.238-6'} en la cuenta de ahorros No {quote.bank_account ?? '046170483120'} {quote.bank_name ?? 'Davivienda'}.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Flete:</strong> El transporte y envío solo está incluido para inversores, smart meter, smart power y smart dongle hacia {quote.cities ?? 'Medellín, Bogotá, Barranquilla, Cali, Bucaramanga y Cúcuta'}. Estructura de aluminio y módulos solares no incluyen flete de envío y transporte.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Disponibilidad:</strong> Antes de realizar la compra se debe verificar que los artículos cotizados estén disponibles.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Entrega:</strong> {quote.company_name ?? 'ALZ ENERGY'} no es responsable por hechos de fuerza mayor que retrasen la entrega. Tiempo estimado: hasta {quote.delivery_days ?? 6} días hábiles posteriores al envío del comprobante de pago.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Empaque:</strong> Los equipos ofertados están sellados y embalados con el sello de {quote.company_name ?? 'ALZ ENERGY SAS'}.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Retenciones:</strong> Para compras que superen ${quote.retention_base ?? '498.000'} aplicar el {quote.retention_rate ?? '2,5'}%. Para fletes superiores a ${quote.freight_base ?? '100.000'} aplicar el {quote.freight_rate ?? '1'}%.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Importante:</strong> No firmar guías de recibido sin inspección previa. Reportar novedades a logística: {quote.logistics_phone ?? '+57 317 1928395'}. {quote.company_name ?? 'ALZ ENERGY'} no responderá por daños no reportados antes de la recepción.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Soporte técnico:</strong> Atención de lunes a viernes de {quote.support_hours ?? '07:30am a 04:30pm'}, no aplica fines de semana ni festivos.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Puesta en marcha:</strong> Debe programarse con mínimo {quote.startup_notice_days ?? 2} días hábiles de anticipación y disponer de {quote.startup_duration_hours ?? 2} horas. Horario: {quote.startup_schedule ?? '07:30am a 03:00pm'}.</p>
-              <p style={{ margin: '0 0 4px 0' }}>• <strong>Contacto soporte:</strong> {quote.support_phone ?? '+57 318 5135015'}.</p>
-            </div>
+              <div style={{ margin: 0, fontSize: '10px', color: '#6b7280', lineHeight: '1.6' }}>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>Vigencia de la oferta:</strong> Cinco (5) días calendario. La venta o reserva de equipos se inicia con Orden de Compra, comprobante de pago y/o anticipo del 30% del valor total ofertado.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>1.</strong> El cliente asume la responsabilidad en la instalación y montaje de los equipos.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>2.</strong> Las transferencias o consignaciones se deben efectuar a nombre de ALZ ENERGY SAS NIT: 901.105.238-6 en la cuenta de ahorros No 046170483120 Davivienda.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>3.</strong> Flete de transporte y envío solo está incluido para Inversores, smart meter, smart power y smart dongle que se despachen hacia Medellín, Bogotá, Barranquilla, Cali, Bucaramanga y Cúcuta. Estructura de Aluminio y módulos solares no incluyen flete de envío y transporte.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>4.</strong> Antes de realizar la compra se debe verificar que los artículos cotizados en la oferta estén disponibles.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>5.</strong> ALZ no es responsable por hechos de fuerza mayor que se presenten en el territorio nacional y que puedan retrasar la entrega una vez despachada la mercancía. Tiempo de entrega de la mercancía, hasta 6 días hábiles posterior al envío del comprobante de pago.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>6.</strong> Los equipos ofertados están debidamente sellados y embalados con el sello de ALZ ENERGY SAS.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>7.</strong> Para las compras que superen la base mínima de retención ($ 1.414.000) practicar el 2,5% y para fletes que superen la base mínima de retención ($ 209.000) practicar el 1%.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>8.</strong> IMPORTANTE: No firmar guías de recibido de mercancía al transportador; sin antes realizar una inspección visual del material comprado. En el momento de la recepción, ante cualquier novedad por favor reportar inmediatamente a nuestra línea de logística +57 317 1928395. ALZ ENERGY no responderá por garantías, en caso de recibido a la transportadora y no informar los daños previo a la recepción del material.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>9.</strong> Los precios aquí presentados están sujetos a cambios sin previo aviso al finalizar el mes en curso. Para garantizar estas tarifas, agradecemos confirmar su pedido antes del 30 de cada mes.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>Tiempos de Entrega</strong></p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Zona Norte (Guajira, Atlántico, Magdalena, Córdoba, Bolívar, Sucre, Cesar): 3 a 4 días hábiles a partir del día de la compra.</p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Zona Centro Oriente - Occidente (Norte de Santander, Santander, Boyacá, Antioquia, Risaralda, Quindío, Caldas, Cundinamarca, Meta, Casanare): 2 a 3 días hábiles a partir del día de la compra.</p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Zona Sur (Tolima, Huila, Caquetá, Valle del Cauca, Cauca, Nariño, Putumayo): 3 a 4 días hábiles a partir del día de la compra.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• Los tiempos anteriores se han determinado en operación normal con nuestros operadores logísticos. Los tiempos pueden estar sujetos a cambios dependiendo de condiciones externas de ALZ o de nuestros operadores Logísticos.</p>
+                <p style={{ margin: '0 0 4px 0' }}>• <strong>Soporte Técnico ALZ ENERGY</strong></p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Horario de Atención Soporte técnico: Lunes a Viernes 07:30am a 04:30pm. No aplica días Sábados, Domingos ni Festivos.</p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Puesta en Marcha de Inversores: El proceso de puesta en marcha de Inversores se debe programar con mínimo 2 días hábiles de anticipación y se debe disponer de 2 horas para este proceso. El horario de programación se estipula en la franja horaria de 07:30am a 03:00pm.</p>
+                <p style={{ margin: '0 0 4px 0', paddingLeft: '10px' }}>Número de contacto Soporte Técnico ALZ Energy: +57 318 5135015.</p>
+              </div>
           </div>
 
         </div>
