@@ -21,7 +21,7 @@ export const QuotationTemplate = forwardRef<HTMLDivElement, QuotationTemplatePro
   const currentConfig: TemplateConfig = config || {
     primaryColor: '#04ec1f',
     fontFamily: "'Montserrat', sans-serif",
-    logoUrl: 'https://srv1646916.hstgr.cloud/uploads/logo.png', 
+    logoUrl: 'https://srv1646916.hstgr.cloud/uploads/receipts/receipt_1781038716802-113424606.png', 
     logoPosition: 'left',
     title: 'COTIZACIÓN COMERCIAL',
     roundedBorders: true,
